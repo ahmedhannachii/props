@@ -1,26 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Profile from '../src/profile/Profile';
+import PropTypes from 'prop-types';
 
-function App() {
+const App = ()=> {
+
+  const  handleName = (name) => {
+    alert(`je suis ${name}`);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+ <Profile
+    fullName="Ahmed" bio="je suis un artiste " profession="Artist"  handleName={handleName} >
+
+    <img src="testi.png" alt="taswira" height="100px" width="100px" />
+
+ </Profile> 
   );
+}
+
+Profile.propTypes = {
+  fullName: PropTypes.string,
+  bio: PropTypes.string,
+  profession: PropTypes.string,
+
 }
 
 export default App;
