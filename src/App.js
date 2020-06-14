@@ -1,6 +1,6 @@
 import React from 'react';
 import Profile from '../src/profile/Profile';
-import PropTypes from 'prop-types';
+
 
 const App = ()=> {
 
@@ -19,11 +19,6 @@ const App = ()=> {
   );
 }
 
-Profile.propTypes = {
-  fullName: PropTypes.string,
-  bio: PropTypes.string,
-  profession: PropTypes.string,
 
-}
 
 export default App;
